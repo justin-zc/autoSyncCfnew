@@ -5,6 +5,10 @@ on:
   schedule:
     - cron: '0 */6 * * *'  # 每6小时自动检查一次
 
+# 允许 GitHub Actions 修改仓库文件
+permissions:
+  contents: write
+
 jobs:
   sync-release:
     runs-on: ubuntu-latest
